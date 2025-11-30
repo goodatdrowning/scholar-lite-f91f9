@@ -26,7 +26,7 @@
   <table>
     <tr>
       <td align="center">
-        <a href="https://692c677331a141b1b3cd18d7--fanciful-lokum-585bb3.netlify.app/">
+        <a href="https://scholar-lite-demo.netlify.app/">
           <img src="https://img.shields.io/badge/Live_Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" />
         </a>
         <br />
