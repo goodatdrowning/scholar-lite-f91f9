@@ -2,8 +2,9 @@
 import { SITE, LOGO_IMAGE } from '../config';
 import { 
   Menu, X, Globe, ChevronDown, Check, Moon, Sun,
-  Home, BookOpen, Trophy, Users, Calendar, UserPlus, Sparkles
+  Home, BookOpen, Trophy, Users, Calendar, UserPlus, Sparkles, Search
 } from 'lucide-react';
+
 import { ui, defaultLang, languages } from '../i18n/ui';
 
 const { nav, i18n, customPages } = SITE;
@@ -15,6 +16,7 @@ const iconMap: Record<string, any> = {
   team: Users,
   activities: Calendar,
   join: UserPlus,
+  search: Search,
 };
 
 // Helper to get icon
@@ -41,15 +43,28 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex gap-6 items-center">
-        {nav.map(item => (
-          <a 
-            href={item.link} 
-            class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
-            data-i18n-key={`nav.${item.key}`}
-          >
-            {item.text}
-          </a>
-        ))}
+        {nav.map(item => {
+          if (item.key === 'search') {
+            return (
+              <a 
+                href={item.link} 
+                class="p-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-full transition-colors"
+                aria-label={item.text}
+              >
+                <Search className="w-5 h-5" />
+              </a>
+            );
+          }
+          return (
+            <a 
+              href={item.link} 
+              class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors"
+              data-i18n-key={`nav.${item.key}`}
+            >
+              {item.text}
+            </a>
+          );
+        })}
         
         <!-- Custom Pages -->
         {customPages && customPages.map(item => (

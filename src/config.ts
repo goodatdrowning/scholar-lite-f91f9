@@ -32,6 +32,7 @@ export const SITE = {
     { text: 'Team', link: '/team', key: 'team' },
     { text: 'Activities', link: '/activities', key: 'activities' },
     { text: 'Join Us', link: '/join', key: 'join' },
+    { text: 'Search', link: '/search', key: 'search' },
   ],
 
   // Custom Pages (Appended after 'Join Us')
