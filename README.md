@@ -43,6 +43,11 @@
   </table>
 </div>
 
+<div align="center">
+  <img src="public/assets/screenshots/home-desktop-mockup.png" width="70%" alt="Desktop View" />
+  <img src="public/assets/screenshots/mobile-view-mockup.png" width="25%" alt="Mobile View" />
+</div>
+
 </div>
 
 ---
@@ -53,6 +58,10 @@
 *   **Zero JS by Default**: Built on **Astro v5**, sending **0kb** of JavaScript to the client for content pages.
 *   **100/100 Lighthouse**: Optimized out-of-the-box for Performance, Accessibility, Best Practices, and SEO.
 *   **Tailwind CSS v4**: The latest utility-first CSS framework for rapid, modern styling.
+
+<p align="center">
+  <img src="public/assets/screenshots/lighthouse-score.png" width="80%" alt="Lighthouse Score">
+</p>
 
 ### 🤖 Smart Automation
 *   **One-Click BibTeX Import**: Stop manually copying papers. Drop your `citations.bib` and run one command.

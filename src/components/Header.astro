@@ -343,7 +343,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
     });
 
     try {
-      const saved = localStorage.getItem('preferred-lang') || 'zh';
+      const saved = localStorage.getItem('preferred-lang') || defaultLang;
       updateHeaderLang(saved);
     } catch {}
 

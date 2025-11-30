@@ -43,6 +43,11 @@
   </table>
 </div>
 
+<div align="center">
+  <img src="public/assets/screenshots/home-desktop-mockup.png" width="70%" alt="Desktop View" />
+  <img src="public/assets/screenshots/mobile-view-mockup.png" width="25%" alt="Mobile View" />
+</div>
+
 </div>
 
 ---
@@ -53,6 +58,10 @@
 *   **默认零 JS (Zero JS)**：基于 **Astro v5** 构建，内容页面向客户端发送 **0kb** JavaScript，实现秒级加载。
 *   **Lighthouse 满分**：开箱即用的性能、可访问性、SEO 优化，均达到 Google Lighthouse 100/100 评分。
 *   **Tailwind CSS v4**：采用最新的原子化 CSS 框架，样式开发从未如此高效。
+
+<p align="center">
+  <img src="public/assets/screenshots/lighthouse-score.png" width="80%" alt="Lighthouse Score">
+</p>
 
 ### 🤖 智能自动化
 *   **一键 BibTeX 导入**：告别手动复制粘贴。只需放入 `citations.bib` 并运行一条命令，即可生成精美的论文列表。
