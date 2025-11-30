@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeamCard from '../components/TeamCard.astro';
+import { getCollection } from 'astro:content';
+
+const allMembers = await getCollection('team');
+
+// Define the order of roles
+const roleOrder = [
+  'Principal Investigator',
+  'Professor',
+  'Teacher',
+  'Postdoctoral Researcher',
+  'Postdoc',
+  'PhD Student',
+  'Master Student',
+  'Graduate Student',
+  'Undergraduate',
+  'Former Member'
+];
+
+// Group members by role
+const groupedMembers = roleOrder.reduce((acc, role) => {
+  const members = allMembers
+    .filter(m => m.data.role === role)
+    .sort((a, b) => (a.data.weight || 100) - (b.data.weight || 100)); // Sort by weight
+  
+  if (members.length > 0) {
+    acc[role] = members;
+  }
+  return acc;
+}, {} as Record<string, typeof allMembers>);
+
+const presentRoles = roleOrder.filter(role => groupedMembers[role]);
+const roleToKey = {
+  'Principal Investigator': 'team.pi',
+  'Professor': 'team.professor',
+  'Teacher': 'team.teacher',
+  'Postdoctoral Researcher': 'team.postdoc_researcher',
+  'Postdoc': 'team.postdoc',
+  'PhD Student': 'team.phd',
+  'Master Student': 'team.master',
+  'Graduate Student': 'team.graduate',
+  'Undergraduate': 'team.undergrad',
+  'Former Member': 'team.former'
+};
+---
+
+<Layout title="Team">
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:py-20">
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4" data-i18n-key="team.title">Our Team</h1>
+      <p class="text-lg text-gray-600" data-i18n-key="team.subtitle">
+        Meet the researchers and students behind our innovations.
+      </p>
+    </div>
+
+    <div class="space-y-20">
+      {roleOrder.map(role => groupedMembers[role] && (
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-8 pl-4 border-l-4 border-blue-600" data-i18n-key={roleToKey[role]}>
+            {role === 'Principal Investigator' ? 'Principal Investigator' :
+             role === 'Professor' ? 'Professors' :
+             role === 'Teacher' ? 'Faculty' :
+             role === 'Postdoctoral Researcher' ? 'Postdoctoral Researchers' :
+             role === 'Postdoc' ? 'Postdoctoral Researchers' :
+             role === 'PhD Student' ? 'PhD Students' :
+             role === 'Master Student' ? 'Master Students' :
+             role === 'Graduate Student' ? 'Graduate Students' :
+             role === 'Undergraduate' ? 'Undergraduate Students' :
+             role === 'Former Member' ? 'Alumni' : role}
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            {groupedMembers[role].map(member => (
+              <TeamCard member={member} />
+            ))}
+          </div>
+        </section>
+      ))}
+
+      {allMembers.length === 0 && (
+        <p class="text-gray-500 text-center py-12" data-i18n-key="team.noMembers">No team members found. Add markdown files to src/content/team/</p>
+      )}
+    </div>
+  </div>
+</Layout>

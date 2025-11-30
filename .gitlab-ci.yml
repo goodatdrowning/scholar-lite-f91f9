@@ -1,0 +1,18 @@
+image: node:lts
+
+pages:
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm install
+    - npm run build
+    # GitLab Pages expects the static site in the 'public' directory
+    # Astro builds to 'dist' by default, so we move it
+    - rm -rf public
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

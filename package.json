@@ -1,7 +1,14 @@
 {
-  "name": "nxu-scholar-frame",
+  "name": "scholar-lite",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A lightweight, modern static website template for academic labs and scholars.",
+  "license": "MIT",
+  "author": "Scholar-Lite Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nxu-scholar/scholar-lite.git"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,6 +16,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.2"
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.16.2",
+    "lucide-react": "^0.555.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.17"
   }
 }
