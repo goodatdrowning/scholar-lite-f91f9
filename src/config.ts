@@ -2,9 +2,9 @@ import heroImage from './assets/hero-real.jpg';
 
 export const SITE = {
   website: 'https://scholar-lite-demo.netlify.app/', // Replace with your actual deployed URL
-  author: 'Scholar-Lite Team',
-  description: 'A lightweight, modern static website template for academic labs and scholars.',
-  title: 'Scholar-Lite',
+  author: 'Dr Mark Phillips',
+  description: 'Origin BJJ N22 - We Create a Complete Martial Artist.',
+  title: 'OriginBJJ N22',
   ogImage: 'astropaper-og.jpg',
   lightAndDarkMode: true,
   postPerPage: 3,
@@ -32,7 +32,7 @@ export const SITE = {
     { text: 'BJJ', link: '/achievements', key: 'achievements' },
     { text: 'MMA', link: '/team', key: 'team' },
     { text: 'About Us', link: '/team', key: 'team' },
-    { text: 'Memberships', link: '/activities', key: 'activities' },
+    { text: 'Memberships', link: '/join', key: 'join' },
     { text: 'Blog', link: '/join', key: 'join' },
   ],
 
@@ -62,7 +62,7 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS = [
   {
-    link: 'https://github.com/fjd2004711/scholar-lite',
+    link: 'https://www.instagram.com/originbjjn22',
     active: true,
   },
 ];
