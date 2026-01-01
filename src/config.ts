@@ -28,7 +28,7 @@ export const SITE = {
   // Navigation
   nav: [
     { text: 'Home', link: '/', key: 'home' },
-    { text: 'Timetable', link: '/research', key: 'research' },
+    { text: 'Timetable', link: '/timetable', key: 'timetable' },
     { text: 'BJJ', link: '/achievements', key: 'achievements' },
     { text: 'MMA', link: '/team', key: 'team' },
     { text: 'About Us', link: '/team', key: 'team' },
