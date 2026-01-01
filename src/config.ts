@@ -29,10 +29,10 @@ export const SITE = {
   nav: [
     { text: 'Home', link: '/', key: 'home' },
     { text: 'Timetable', link: '/timetable', key: 'timetable' },
-    { text: 'BJJ', link: '/achievements', key: 'achievements' },
-    { text: 'MMA', link: '/team', key: 'team' },
-    { text: 'About Us', link: '/team', key: 'team' },
-    { text: 'Memberships', link: '/join', key: 'join' },
+    { text: 'BJJ', link: '/bjj', key: 'bjj' },
+    { text: 'MMA', link: '/mma', key: 'mma' },
+    { text: 'About Us', link: '/about', key: 'about' },
+    { text: 'Memberships', link: '/memberships', key: 'membership' },
     { text: 'Blog', link: '/join', key: 'join' },
   ],
 
