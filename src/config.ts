@@ -11,29 +11,29 @@ export const SITE = {
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   
   // Lab Info
-  labName: 'Scholar-Lite Lab',
-  university: 'University Name',
+  labName: 'Origin BJJ Team N22',
+  university: ' ',
   logo: '/assets/logo-real.svg', // Logo path
   avatar: '/assets/logo-real.svg', // Avatar for SEO/Schema
   email: 'contact@lab.edu', // Contact email for Join Us page
 
   // Hero Section (Home Page) - Main content does not need to be translated for 8 languages by default
   hero: {
-    title: 'Advancing Computer Vision & Deep Learning Research.',
-    subtitle: 'We are the Scholar-Lite Lab.',
-    action: 'View Publications', // Optional call to action text
+    title: 'Origin BJJ Team N22',
+    subtitle: 'We create a complete martial artist.',
+    action: 'Start your journey', // Optional call to action text
     image: heroImage, // Hero image path
   },
 
   // Navigation
   nav: [
     { text: 'Home', link: '/', key: 'home' },
-    { text: 'Research', link: '/research', key: 'research' },
-    { text: 'Achievements', link: '/achievements', key: 'achievements' },
-    { text: 'Team', link: '/team', key: 'team' },
-    { text: 'Activities', link: '/activities', key: 'activities' },
-    { text: 'Join Us', link: '/join', key: 'join' },
-    { text: 'Search', link: '/search', key: 'search' },
+    { text: 'Timetable', link: '/research', key: 'research' },
+    { text: 'BJJ', link: '/achievements', key: 'achievements' },
+    { text: 'MMA', link: '/team', key: 'team' },
+    { text: 'About Us', link: '/team', key: 'team' },
+    { text: 'Memberships', link: '/activities', key: 'activities' },
+    { text: 'Blog', link: '/join', key: 'join' },
   ],
 
   // Custom Pages (Appended after 'Join Us')
