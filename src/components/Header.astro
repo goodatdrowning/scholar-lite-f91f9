@@ -77,35 +77,7 @@ const getIcon = (key: string) => iconMap[key] || Sparkles;
            </a>
         ))}
         
-        
-        
-        {i18n.enabled && (
-          <div class="relative ml-2 group">
-            <button 
-              class="flex items-center gap-1 px-3 py-2 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-600 transition-colors outline-none"
-              aria-label="Select Language"
-            >
-              <Globe className="w-4 h-4" />
-              <span class="text-xs font-medium uppercase" id="current-lang-label">ZH</span>
-              <ChevronDown className="w-3 h-3 opacity-50" />
-            </button>
-            
-            <!-- Dropdown Menu -->
-            <div class="absolute right-0 pt-2 w-40 hidden group-hover:block transform origin-top-right transition-all">
-              <div class="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
-                {Object.entries(languages).map(([code, label]) => (
-                  <button
-                    class="w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors lang-option flex items-center justify-between group/item"
-                    data-lang={code}
-                  >
-                    <span>{label}</span>
-                    <Check className="w-4 h-4 text-blue-600 opacity-0 group-[.active]/item:opacity-100 transition-opacity" />
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
+
       </nav>
 
       <!-- Mobile Menu Button -->
